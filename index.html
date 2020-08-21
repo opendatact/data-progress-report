@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Austin Open Data Progress Report</title>
+        <meta name="description" content="A status report built by Open Austin members to monitor the progress of each Department's compliance with the City Manager's Open Data Initiative 2.0.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="content">
+                <a class="open-atx-logo" href="https://open-austin.org">
+                    <img alt="Open Austin" height="40" src="https://www.open-austin.org/wp-content/uploads/2013/04/copy-Open_Austin_Banner_400x80.png" />
+                </a>
+                <h1>City of Austin Open Data</h1>
+                <h2>Progress Report Card</h2>
+                <div class="description">
+                    The City Manager's Open Data Initiative 2.0 kicked off in May 2015 with a 90-day "sprint-style" project designed to increase the amount of open data published by each City department.
+                    <p>Departments were asked to:</p>
+                    <ol>
+                        <li>designate an <b>open data liaison</b>,</li>
+                        <li>conduct a <b>data inventory</b>,</li>
+                        <li>submit an <b>open data participation plan</b>, and</li>
+                        <li><b>publish at least three new datasets</b> to the City&rsquo;s open data portal.</li>
+                    </ol>
+                    <p>Departments continue to work with <a href="https://www.austintexas.gov/techreport/communications-and-technology-management" target="_blank">CTM</a> to meet these goals, and we will update this dataset regularly to reflect their progress untifurther notice. <i>This progress report evaluates <span class="dept-count">xx</span> CoA departments.</i></p>
+                </div>
+            </div>
+        </div>
+        <div class="report-header">
+            <h2 class="secondary-title">Department Progress</h2>
+
+            <script id="metadata-template" type="text/x-handlebars-template">
+                <p><a href="https://data.austintexas.gov/resource/8qty-vat2" target="_blank">Source data</a> last updated {{updated}}</p></i>
+            </script>
+        </div>
+        <div class="report-container">
+            <div class="item grid-header">
+                <div class="score-row">
+                    <div class="first-column-score">
+                        <p class="symbols-text">Department</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Designate Liaison</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Data Inventory</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Submit Plan</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Publish 3 Datasets</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <script id="row-template" type="text/x-handlebars-template">
+            <div class="item"> 
+                <div class="score-row"> 
+                    <div class="first-column-score">
+                        <p class="dept-name">{{department}}</p> 
+                        <img class="dept-icon" src="{{image}}"/> 
+                    </div>
+                    <div class="score liaison-score {{scores.liaison.color}}">
+                        <p class="score-text">{{scores.liaison.text}}</p>
+                    </div>
+                    <div class="score inventory-score {{scores.inventory.color}}">
+                        <p class="score-text">{{scores.inventory.text}}</p>
+                    </div>
+                    <div class="score plans-score {{scores.plans.color}}">
+                        <p class="score-text">{{scores.plans.text}}</p>
+                    </div>
+                    <div class="score publication-score {{scores.publication.color}}">
+                        <p class="score-text">{{scores.publication.text}}</p>
+                    </div>
+                </div>
+            </div>        
+        </script>
+
+        <div class="footer">
+            <p>Data retrieved from <a href="https://www.data.austintexas.gov/">data.austintexas.gov</a>.</p>
+            <p>
+                <a class="open-atx-logo" href="https://open-austin.org">
+                    <img alt="Open Austin" height="40" src="https://www.open-austin.org/wp-content/uploads/2013/04/copy-Open_Austin_Banner_400x80.png" />
+                </a>
+                Created by the beautiful people of <a href="https://open-austin.org" target="_blank">Open Austin</a>.
+            </p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="js/svg.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-66672781-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
