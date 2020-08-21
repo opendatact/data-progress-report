@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Connecticut Data Progress</title>
+        <meta name="description" content="A status report to monitor the progress of each Department's compliance with Public Act 18-175">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="content">
+                <a class="open-atx-logo" href="https://data.ct.gov">
+                    <img alt="CT Open Data" height="120" src="https://data.ct.gov/api/assets/58B1625E-0B18-457A-A5B6-07287B76E1B3?Data_Portal.png" />
+                </a>
+                <h1>State of Connecticut</h1>
+                <h2> Agency Data Management Progress Report Card</h2>
+                <div class="description">
+                    Public Act 18-175 requires each executive branch agency to begin to manage data as an asset. In addition, it bolsters CT's efforts associated with open data.
+                    <p>Agencies are required to:</p>
+                    <ol>
+                        <li>designate an <b>Agency Data Officer (ADO)</b>,</li>
+                        <li>inventory <b>high value data</b>, and</li>
+                        <li>create <b>open data access plans</b></li>
+
+                    </ol>
+                    <p>Agencies continue to work with <a href="http://www.ct.gov/opm/cwp/view.asp?a=2998&Q=566940&PM=1" target="_blank">OPM</a> to meet these goals, and we will update this dataset regularly to reflect their progress until further notice.</p>
+                </div>
+            </div>
+        </div>
+        <div class="report-header">
+            <h2 class="secondary-title">Agency Progress</h2>
+
+            <script id="metadata-template" type="text/x-handlebars-template">
+                <p><a href="https://data.ct.gov/dataset/Agency-Status/pb5x-kf8z" target="_blank">Source data</a> </p></i>
+            </script>
+        </div>
+        <div class="report-container">
+            <div class="item grid-header">
+                <div class="score-row">
+                    <div class="first-column-score">
+                        <p class="symbols-text">Agency</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Designate ADO</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Inventory Data</p>
+                    </div>
+                    <div class="score">
+                        <p class="symbols-text">Access Plan</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+        <script id="row-template" type="text/x-handlebars-template">
+            <div class="item"> 
+                <div class="score-row"> 
+                    <div class="first-column-score">
+                        <p class="dept-name">{{agency}}</p> 
+                       <!--img class="dept-icon" src="{{image}}"/-->
+                    </div>
+                    <div class="score liaison-score {{scores.ado.color}}">
+                        <p class="score-text">{{scores.ado.text}}</p>
+                    </div>
+                    <div class="score publication-score {{scores.submitted_initial_datasets.color}}">
+                        <p class="score-text">{{scores.submitted_initial_datasets.text}}</p>
+                    </div>
+                    <div class="score plans-score {{scores.published_initial_datasets.color}}">
+                        <p class="score-text">{{scores.published_initial_datasets.text}}</p>
+                    </div>
+
+                </div>
+            </div>        
+        </script>
+
+        <div class="footer">
+            <p>Data retrieved from <a href="https://data.ct.gov">data.ct.gov</a></p>
+            <p><a class="open-ct-logo" href="https://data.ct.gov">
+                    <img alt="CT Open Data" height="40" src="http://www.ct.gov/opm/lib/opm/secretary/open_data/ct-applogo.jpg"/>
+                </a></p>
+		<p><a href="https://github.com/OpenDataCT/data-progress-report">Source code</a></p>
+               <p> Originally created by <a href="https://open-austin.org" target="_blank">Open Austin</a>.
+               <p> Page designed using <a href="https://tsuyoshiwada.github.io/sweet-scroll/">Smooth-scroll</a>.
+            </p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="js/svg.js"></script>
+        <script src="js/main.js"></script>
+
+
+    </body>
+</html>
